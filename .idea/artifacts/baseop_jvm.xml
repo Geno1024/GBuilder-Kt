@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="baseop-jvm">
+    <output-path>$PROJECT_DIR$/baseop/build/libs</output-path>
+    <root id="archive" name="baseop-jvm.jar">
+      <element id="module-output" name="GBuilder.baseop.jvmMain" />
+    </root>
+  </artifact>
+</component>

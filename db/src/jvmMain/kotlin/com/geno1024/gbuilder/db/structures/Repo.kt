@@ -3,6 +3,7 @@ package com.geno1024.gbuilder.db.structures
 import org.jetbrains.exposed.sql.ForeignKeyConstraint
 import org.jetbrains.exposed.sql.ReferenceOption
 import org.jetbrains.exposed.sql.Table
+import org.jetbrains.exposed.sql.select
 
 @Suppress("unused")
 object Repo : Table()
@@ -22,5 +23,4 @@ object Repo : Table()
     val pathToRepo = text("pathToRepo")
 
     override val primaryKey: PrimaryKey = PrimaryKey(id)
-
 }

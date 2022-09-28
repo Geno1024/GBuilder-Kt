@@ -2,6 +2,7 @@ package com.geno1024.gbuilder.db.structures
 
 import org.jetbrains.exposed.sql.Table
 import org.jetbrains.exposed.sql.javatime.datetime
+import org.jetbrains.exposed.sql.select
 import java.time.LocalDateTime
 
 @Suppress("unused")
@@ -18,4 +19,7 @@ object User : Table()
     val updatedAt = datetime("updatedAt").default(LocalDateTime.now())
 
     override val primaryKey: PrimaryKey = PrimaryKey(id)
+
+    fun findUserById(id: Long) = select { User.id eq id }.distinct()
+    fun findUserByNickname(nickname: String) = select { User.nickname eq nickname }.distinct()
 }
